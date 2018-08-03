@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amazon</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div id="product-details">
+      <div id="photo-gallery">Photo Gallery</div>
+      <div id="product-info">Product Info</div>
+    </div>
+    <div id="app">Similar Products</div>
+    <div id="service">Reviews</div>
+
+    <script src="https://s3-us-west-1.amazonaws.com/viamis-cdn/bundleHK.js" charset="utf-8"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/viamis/bundle.js" charset="utf-8"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/viamis-cdn/bundle.js" charset="utf-8"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/viamis-ml-cdn/bundle.js" charset="utf-8"></script>
+    <script>
+      ReactDOM.render(React.createElement(PhotoGalleryModule), document.getElementById("app"))
+    </script>
+  </body>
+</html>

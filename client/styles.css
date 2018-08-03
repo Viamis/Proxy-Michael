@@ -1,0 +1,14 @@
+#photo-gallery {
+  vertical-align: top;
+  display: inline-block;
+  width: 50%;
+}
+#product-info {
+  display: inline-block;
+}
+#app {
+  align-self: center;
+}
+#service {
+  align-self: center;
+}
