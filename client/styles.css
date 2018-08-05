@@ -1,14 +1,43 @@
+body {
+  margin: 0px;
+}
+
+#header {
+  width: 100%;
+}
+
+#product-details {
+  margin: 8px;
+}
+
 #photo-gallery {
   vertical-align: top;
   display: inline-block;
-  width: 50%;
+  min-width: 400px;
+  width: 49%;
 }
+
 #product-info {
   display: inline-block;
+  min-width: 400px;
+  width: 49%;
 }
+
 #app {
+  height: 100px;
   align-self: center;
 }
+
 #service {
   align-self: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #photo-gallery {
+    width: 95%;
+  }
+  
+  #product-info {
+    width: 95%;
+  }  
 }
