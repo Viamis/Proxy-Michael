@@ -1,17 +1,15 @@
 version: '3'
 
 services:
-  proxy:
-    build: ./
-    volumes:
-      - ./:/src/app
-    depends_on:
-      # - similar_products
-      - photo_gallery
-      - product_info
-      # - reviews
-    ports:
-      - '3000:3000'
+  # proxy:
+  #   image: slowmike/michael_proxy_v1
+  #   depends_on:
+  #     - similar_products
+  #     - photo_gallery
+  #     - product_info
+  #     - reviews
+  #   ports:
+  #     - '80:3000'
 
   # similar_products:
   #   image: hanjoon3/similar-products_similarproducts:component
@@ -31,15 +29,15 @@ services:
   photo_gallery_db:
     image: slowmike/photo_gallery_db_v1
 
-  product_info:
-    image: tonykijak/viamis:v0.1
-    depends_on:
-      - product_info_db
-    ports:
-      - '3003:3003'
+  # product_info:
+  #   image: tonykijak/viamis:v0.1
+  #   depends_on:
+  #     - product_info_db
+  #   ports:
+  #     - '3003:3003'
   
-  product_info_db:
-    image: tonykijak/viamis:db_v0.1
+  # product_info_db:
+  #   image: tonykijak/viamis:db_v0.1
 
   # reviews:
   #   image: cheyennenoel/review-server
@@ -50,6 +48,16 @@ services:
   
   # reviews_db:
   #   image: cheyennenoel/review-database
-
-
+  
+  proxy:
+    build: ./
+    volumes:
+      - ./:/src/app
+    depends_on:
+      # - similar_products
+      - photo_gallery
+      # - product_info
+      # - reviews
+    ports:
+      - '3000:3000'
   
