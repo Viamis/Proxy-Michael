@@ -4,10 +4,10 @@ services:
   # proxy:
   #   image: slowmike/michael_proxy_v1
   #   depends_on:
-  #     - similar_products
+  #     # - similar_products
   #     - photo_gallery
-  #     - product_info
-  #     - reviews
+  #     # - product_info
+  #     # - reviews
   #   ports:
   #     - '80:3000'
 

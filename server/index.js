@@ -1,6 +1,5 @@
 const express = require('express');
 const proxy = require('http-proxy-middleware');
-
 const path = require('path');
 
 
@@ -16,7 +15,7 @@ app.use('/products', proxy({target: 'http://product_info:3003'}));
 app.use('/reviews', proxy({target: 'http://reviews:3004'}));
 
 
-app.get('/:id', (req, res) => { ll
+app.get('/:id', (req, res) => {
   res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
 
